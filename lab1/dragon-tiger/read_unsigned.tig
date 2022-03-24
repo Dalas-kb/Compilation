@@ -1,0 +1,34 @@
+let
+    var or: int := 0
+    var chr : int := 0
+
+    function read_unsigned():int = 
+    (
+
+        or := ord(getchar());
+        while or<>10 do 
+        
+            if or>47 & or<59 then (
+
+                or:= or-48;
+                chr:= chr*10 + or;
+                or := ord(getchar())
+                
+            )   
+            else(
+               chr:=-1;
+                
+                
+                 break
+               );
+    
+            chr
+        
+    )
+
+    var a : int := read_unsigned()
+
+in
+    print_int(a*2)
+
+end
